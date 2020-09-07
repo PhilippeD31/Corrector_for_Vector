@@ -19,9 +19,9 @@ tags=vector, polygon
 
 author=Philippe Desboeufs
 email=philippe.desboeufs@haute-garonne.gouv.fr
-homepage=
-tracker=
-repository=
+homepage=https://github.com/PhilippeD31/Corrector_for_Vector
+tracker=https://github.com/PhilippeD31/Corrector_for_Vector/issues
+repository=https://github.com/PhilippeD31/Corrector_for_Vector
 icon=icon.png
 experimental=False
 deprecated=False

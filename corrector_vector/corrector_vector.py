@@ -533,7 +533,7 @@ UPDATE trecal SET deltax=(SELECT newx FROM compar WHERE uid=idnu), deltay=(SELEC
 
 
 
-  def processPG(self): 
+  def processPG(self): ### The treatment with PostGIS (PG)
     win= iface.mainWindow()
     if not self.datasource:
       QMessageBox.warning(win,self.tr("Important!"),self.tr("Please choose the PostGIS connection.") ) #  print("Il fait d'abord établir une connexion PG")
@@ -746,57 +746,6 @@ UPDATE trecal SET deltax=(SELECT newx FROM compar WHERE uid=idnu), deltay=(SELEC
       if v in schemas: schemas.remove(v)
     self.populateComboBox( self.dlg.DBSchema, schemas, self.dlg.DBSchema.toolTip(), True )
     self.dlg.DBSchema.setCurrentText(newSchema)
-
-
-
-  def populateGui(self): ### A SUPPRIMER     
-    #self.populateComboBox(self.dlg.QueryType,self.querySet.getQueryLabels(),"Select query type",True)
-    self.populateComboBox(self.dlg.JOIN,["INNER JOIN","CROSS JOIN","RIGHT OUTER JOIN","LEFT OUTER JOIN","FULL OUTER JOIN"],"Select",True)
-    #self.populateComboBox(self.dlg.SPATIALREL,self.querySet.getSpatialRelationships(),"Select spatial relationship",True)
-    self.populateComboBox(self.dlg.KEYFIELD,["ogc_fid","id","fid","gid","FID","GID","ID"],"",None)
-    self.populateComboBox(self.dlg.GEOMETRYFIELD,["the_geom","geom","GEOM","geometry"],"",None)
-    self.dlg.checkAutoCompiled.setChecked(True)
-    self.dlg.tabWidget.setCurrentIndex(0)
-
-  def populateLayerMenu(self): ### A SUPPRIMER   
-    self.addListToFieldTable(self.dlg.LayerList,self.PSQL.getLayers(),None)
-
-  def loadPSQLLayers(self): ### A SUPPRIMER     
-    if self.dlg.DBSchema.currentText() == "Select schema":  return
-    self.PSQL.setSchema(self.dlg.DBSchema.currentText())
-    self.populateGui()
-    #self.resetDialog()
-    #self.dlg.tabWidget.setCurrentIndex(1)
-    ##self.querySet.setSchema(self.dlg.DBSchema.currentText())
-    self.populateComboBox(self.dlg.GEOMETRYFIELD,self.PSQL.scanLayersForGeometry(),"",None)
-    self.populateComboBox(self.dlg.KEYFIELD,self.PSQL.scanLayersForPrimaryKey(),"",None)
-    #sync schemab con dbschema
-    self.dlg.SCHEMAb.setCurrentIndex(self.dlg.DBSchema.currentIndex())
-    ##self.querySet.setParameter("SCHEMAb",self.dlg.SCHEMAb.currentText())
-    self.populateLayerMenu()
-
-
-  def addListToFieldTable(self,fieldSlot,fl,check,exclude = None): ### A SUPPRIMER   
-    # Called to populate field list for WHERE statement
-    wdgt=fieldSlot
-    wdgt.clear()
-    for row in fl:
-        item=QListWidgetItem()
-        if check:
-            item.setFlags(item.flags() | Qt.ItemIsUserCheckable)
-            item.setCheckState(Qt.Unchecked)
-        item.setText(row)
-        #if self.PSQL.isTable(row):  item.setIcon(QIcon(":/plugins/postgisquerybuilder/iT.png"))
-        #elif self.PSQL.isView(row): item.setIcon(QIcon(":/plugins/postgisquerybuilder/iV.png"))
-        #elif self.PSQL.isMaterializedView(row): item.setIcon(QIcon(":/plugins/postgisquerybuilder/iM.png"))
-        # Disable geometryfield and auto set checked/unchecked
-        wdgt.addItem(item)
-        if check and exclude and row == exclude: #self.geoQuery and
-            if self.geoQuery:
-                item.setCheckState(Qt.Unchecked)
-            else:
-                item.setCheckState(Qt.Checked)
-            item.setFlags(item.flags() & (~Qt.ItemIsEnabled))
 
 
   def layerDelete(self, schema, layer, cascade=None):
