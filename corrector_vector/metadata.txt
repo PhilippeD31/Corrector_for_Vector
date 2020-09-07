@@ -1,0 +1,27 @@
+[general]
+name=Corrector for Vector
+name[fr]=Correcteur pour Vecteur
+version=0.3.0
+qgisMinimumVersion=3.4
+
+description=Correct a group of misshapen polygons, move, deform a polygon layer.
+description[fr]=Corriger un groupe de polygones déformés, recaler, déformer une couche de polygones.
+
+about=Designed to correct, move and repair polygons that have been improperly digitized (or digitized on a bad map) and that exhibit offsets and distortions.<br>You simply draw as many deformation arrows (simple linestrings) as needed.<br>And choose to process it either with or without PostGIS (faster with PostGIS).
+about[fr]=Conçu pour recaler, déplacer et réparer des polygones qui ont été mal numérisés (ou numérisés sur un mauvais référentiel) et qui présentent des décalages et déformations.<br>Il suffit de dessiner autant de flèches de déformations (des lignes simples) que nécessaire.<br>Et choisir de faire le traitement avec PostGIS ou sans (plus rapide avec PostGIS).
+
+changelog=0.3.0 Translator
+ 0.2.0 Adding process without PostGIS: only QGIS
+ 0.1.0 Treatment with PostGIS
+
+# tags are comma separated with spaces allowed
+tags=vector, polygon
+
+author=Philippe Desboeufs
+email=philippe.desboeufs@haute-garonne.gouv.fr
+homepage=
+tracker=
+repository=
+icon=icon.png
+experimental=False
+deprecated=False
