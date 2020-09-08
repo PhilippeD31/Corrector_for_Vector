@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr_FR" sourcelanguage="en_US">
+<!DOCTYPE TS>
+<TS version="2.1" language="fr_FR" sourcelanguage="en_US">
 <context>
     <name>CorrectorVector</name>
     <message>
@@ -21,72 +22,74 @@
         <location filename="../ui_corrector_vector.ui" line="67"/>
         <source>In order to deform the source layer, the plugin will use a layer of simple oriented linestrings (arrows) that define distortion vectors.
 For a simple translation, only one arrow is needed. For more complex twists, draw more arrows throughout the source layer.
-Draw an arrow with only 2 vertices, from a point of the source layer to the position it will be moved to.</source>
+Draw an arrow with only 2 vertices, from a point of the source layer to the position it will be moved to.
+Tip: in order to anchor an area that is not to be moved, you add a zero length arrow (its end point at the same position as its start point).</source>
         <translation>Afin de déformer les polygones de la source, cette extension utilise une couche de lignes simples et orientées (des flèches) qui définissent les vecteurs de déformation. Dessiner dans la couche des flèches autant de lignes que nécessaire.
-Tracer des flèches avec seulement 2 sommets. Leur point de départ : un point de la couche source. Leur point d&apos;arrivée : la position à laquelle ce point se retrouvera après le traitement.</translation>
+Tracer des flèches avec seulement 2 sommets. Leur point de départ : un point de la couche source. Leur point d&apos;arrivée : la position à laquelle ce point se retrouvera après le traitement.
+Astuce : pour fixer une zone qui ne doit pas être déplacée, il faut ajouter une flèche de longueur nulle (son point d&apos;arrivée à la même position que son point de départ).</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="76"/>
+        <location filename="../ui_corrector_vector.ui" line="77"/>
         <source>Layer with linestrings : deformation vectors (arrows)</source>
         <translation>La couche avec les lignes vecteurs de déformation (flèches)</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="101"/>
+        <location filename="../ui_corrector_vector.ui" line="102"/>
         <source>Create temp layer and draw</source>
         <translation>Créer couche temp et dessiner</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="170"/>
+        <location filename="../ui_corrector_vector.ui" line="171"/>
         <source>Process with PostgreSQL / PostGIS (faster)</source>
         <translation>Traiter avec PostgreSQL / PostGIS (plus rapide)</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="193"/>
+        <location filename="../ui_corrector_vector.ui" line="194"/>
         <source>Connection (PostGIS 2.x minimum)</source>
         <translation>Connexion (PostGIS 2.x minimum)</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="208"/>
+        <location filename="../ui_corrector_vector.ui" line="209"/>
         <source>select working postgres connection</source>
         <translation>Choisir la connexion Postgres</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="215"/>
+        <location filename="../ui_corrector_vector.ui" line="216"/>
         <source>Refresh</source>
         <translation>Rafraichir</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="227"/>
+        <location filename="../ui_corrector_vector.ui" line="228"/>
         <source>Choose the working schema (temp tables will be created)</source>
         <translation>Choisir le schéma de travail (des tables temp seront créées)</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="273"/>
+        <location filename="../ui_corrector_vector.ui" line="274"/>
         <source>Add a new schema</source>
         <translation>Nouveau schéma</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="555"/>
+        <location filename="../ui_corrector_vector.ui" line="556"/>
         <source>Start</source>
         <translation>Démarrer</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="744"/>
+        <location filename="../ui_corrector_vector.ui" line="745"/>
         <source>informations</source>
         <translation>informations</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="506"/>
+        <location filename="../ui_corrector_vector.ui" line="507"/>
         <source>Without PostGIS</source>
         <translation>Sans PostGIS</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="772"/>
+        <location filename="../ui_corrector_vector.ui" line="773"/>
         <source>Log</source>
         <translation>Journal</translation>
     </message>
     <message>
-        <location filename="../ui_corrector_vector.ui" line="729"/>
+        <location filename="../ui_corrector_vector.ui" line="730"/>
         <source>informations during the process</source>
         <translation>informations pendant le processus</translation>
     </message>

@@ -66,7 +66,8 @@
        <property name="plainText">
         <string>In order to deform the source layer, the plugin will use a layer of simple oriented linestrings (arrows) that define distortion vectors.
 For a simple translation, only one arrow is needed. For more complex twists, draw more arrows throughout the source layer.
-Draw an arrow with only 2 vertices, from a point of the source layer to the position it will be moved to.</string>
+Draw an arrow with only 2 vertices, from a point of the source layer to the position it will be moved to.
+Tip: in order to anchor an area that is not to be moved, you add a zero length arrow (its end point at the same position as its start point).</string>
        </property>
       </widget>
      </item>
